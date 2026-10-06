@@ -23,8 +23,12 @@ DEFAULT_GAME_DIR = Path(
 )
 INFO_LIMIT_BYTES = 1024 * 1024
 
-_TYPE_RE = re.compile(r'^\s*"Type"\s*:\s*"([^"]+)"\s*,?\s*$', re.MULTILINE)
-_BRAND_RE = re.compile(r'^\s*"Brand"\s*:\s*"([^"]+)"\s*,?\s*$', re.MULTILINE)
+_TYPE_RE = re.compile(
+    r'^[ \t]*"Type"[ \t]*:[ \t]*"([^"]+)"[ \t]*,?[ \t]*$', re.MULTILINE
+)
+_BRAND_RE = re.compile(
+    r'^[ \t]*"Brand"[ \t]*:[ \t]*"([^"]+)"[ \t]*,?[ \t]*$', re.MULTILINE
+)
 
 
 class InventoryError(Exception):
