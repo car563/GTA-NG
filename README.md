@@ -4,7 +4,7 @@ A solo GTA V Legacy Story Mode mod project. The goal is to replace GTA cars with
 
 ## First playable prototype
 
-The repository now includes a ScriptHookVDotNet raw C# script at `scripts/GTA-NG.3.cs`. It activates when the player drives one of these six GTA compact cars: Blista, Prairie, Issi, Panto, Dilettante, or Kanjo. It applies a modest power adjustment and adds impact dents plus engine damage after harder collisions.
+The repository now includes a ScriptHookVDotNet raw C# script at `scripts/GTA-NG.3.cs`. It activates when the player drives one of these six GTA compact cars: Blista, Prairie, Issi, Panto, Dilettante, or Kanjo. It applies a modest power increase and grip reduction, then adds impact dents and engine damage after harder collisions.
 
 This is a playable gameplay prototype, not a BeamNG vehicle conversion: the six vehicles still use their original GTA models. GTA's script natives cannot reproduce BeamNG's wheel-by-wheel soft-body physics. Actual BeamNG model imports and larger vehicle coverage need a separate conversion pipeline.
 
