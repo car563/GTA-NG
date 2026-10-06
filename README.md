@@ -24,6 +24,14 @@ python tools/inventory_beamng_vehicles.py --game-dir "C:\Program Files (x86)\Ste
 
 The tool lists only archives recorded in BeamNG's local `integrity.json`. Its output is machine-specific and should stay local; do not commit the generated inventory or any game assets.
 
+## Checks
+
+Run the inventory unit tests with the Python standard library:
+
+```powershell
+python -m unittest discover -s tests -v
+```
+
 ## Safety and asset handling
 
 - Story Mode only. Do not use this mod in GTA Online.
