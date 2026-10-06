@@ -67,10 +67,11 @@ public sealed class GtaNgPrototype : Script
 
     private static void ApplyDrivingTune(Vehicle vehicle)
     {
-        // GTA exposes a power-increase native to scripts, but not BeamNG's
+        // GTA exposes power and grip modifiers to scripts, but not BeamNG's
         // wheel-by-wheel soft-body/handling solver. Keep the change modest.
         Function.Call(Hash.SET_VEHICLE_CHEAT_POWER_INCREASE, vehicle.Handle, 8.0f);
-        Function.Call(Hash.SET_VEHICLE_REDUCE_GRIP, vehicle.Handle, false);
+        Function.Call(Hash.SET_VEHICLE_REDUCE_GRIP_LEVEL, vehicle.Handle, 1);
+        Function.Call(Hash.SET_VEHICLE_REDUCE_GRIP, vehicle.Handle, true);
     }
 
     private static void ApplyCrashDamage(Vehicle vehicle, float speedLoss)
