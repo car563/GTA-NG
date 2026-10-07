@@ -13,9 +13,17 @@ This is a gameplay prototype, not a BeamNG vehicle conversion: the six vehicles 
 - GTA V Legacy on PC.
 - Script Hook V compatible with the installed GTA V version. The game currently installed for development is build 1.0.3889.0.
 - ScriptHookVDotNet v3. Stable v3.6.0 is incompatible with GTA builds 1.0.3258.0 and later; use nightly.89 or later. The current official nightly is [v3.7.0-nightly.191](https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/tag/v3.7.0-nightly.191).
-- After installing those runtime dependencies into the GTA V game folder, run `install.ps1` from this repository in an elevated PowerShell window. It checks for the required files and copies `scripts/GTA-NG.3.cs` into GTA's `scripts` directory.
 
-The installer only places the GTA-NG script; it does not download or install Script Hook V or ScriptHookVDotNet. Do not launch GTA Online with these files installed; this project is for Story Mode only. This is not a one-click Melty installation.
+First install the compatible runtime files into the GTA V game folder. Then download or clone the full `gta-storymode-prototype` branch so `install.ps1` remains beside the `scripts` folder. Open PowerShell as Administrator in that repository folder and run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\install.ps1
+```
+
+The installer checks that the GTA and Script Hook files exist, copies `scripts/GTA-NG.3.cs` into GTA's `scripts` directory, and waits for Enter before closing so errors remain visible. If it reports missing files, install the compatible runtime first. If it reports that the mod source is missing, download the full branch instead of opening only the `install.ps1` file.
+
+The installer does not download or install Script Hook V or ScriptHookVDotNet. Do not launch GTA Online with these files installed; this project is for Story Mode only. This is not a one-click Melty installation.
 
 ## BeamNG inventory tool
 
