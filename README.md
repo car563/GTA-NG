@@ -4,18 +4,18 @@ A solo GTA V Legacy Story Mode mod project. The goal is to replace GTA cars with
 
 ## First playable prototype
 
-The repository now includes a ScriptHookVDotNet raw C# script at `scripts/GTA-NG.3.cs`. It activates when the player drives one of these six GTA compact cars: Blista, Prairie, Issi, Panto, Dilettante, or Kanjo. It applies a modest power increase and grip reduction, then adds impact dents and engine damage after harder collisions.
+The repository includes a ScriptHookVDotNet raw C# script at `scripts/GTA-NG.3.cs`. It activates when the player drives one of six GTA compact cars: Blista, Prairie, Issi, Panto, Dilettante, or Kanjo. It applies a modest power increase and grip reduction, then adds impact dents and engine damage after harder collisions.
 
-This is a playable gameplay prototype, not a BeamNG vehicle conversion: the six vehicles still use their original GTA models. GTA's script natives cannot reproduce BeamNG's wheel-by-wheel soft-body physics. Actual BeamNG model imports and larger vehicle coverage need a separate conversion pipeline.
+This is a gameplay prototype, not a BeamNG vehicle conversion: the six vehicles still use their original GTA models. GTA's script natives cannot reproduce BeamNG's wheel-by-wheel soft-body physics. Actual BeamNG model imports and wider vehicle coverage need a separate conversion pipeline.
 
 ## Requirements and install
 
 - GTA V Legacy on PC.
-- A Script Hook V build compatible with the installed GTA V version.
-- ScriptHookVDotNet v3 compatible with that Script Hook V/GTA build. These dependencies are installed manually and are not included here.
-- Copy `scripts/GTA-NG.3.cs` into the GTA V game folder's `scripts` directory. Create the directory if needed. ScriptHookVDotNet compiles versioned `.3.cs` source scripts when the game starts.
+- Script Hook V compatible with the installed GTA V version. The game currently installed for development is build 1.0.3889.0.
+- ScriptHookVDotNet v3. The stable v3.6.0 release is incompatible with GTA builds 1.0.3258.0 and later; use nightly.89 or later. The current official nightly is [v3.7.0-nightly.191](https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/tag/v3.7.0-nightly.191).
+- Copy `scripts/GTA-NG.3.cs` into the GTA V game folder's `scripts` directory. Create the directory if needed. ScriptHookVDotNet loads versioned `.3.cs` source scripts from that directory.
 
-Script Hook V and ScriptHookVDotNet are required, so this prototype is not currently a one-click Melty installation. Do not launch GTA Online with these files installed; this project is for Story Mode only.
+Do not launch GTA Online with these files installed; this project is for Story Mode only. Script Hook V and ScriptHookVDotNet must be installed manually and are not bundled here. This is not a one-click Melty installation.
 
 ## BeamNG inventory tool
 
@@ -41,7 +41,7 @@ python -m unittest discover -s tests -v
 
 Implemented: BeamNG local car inventory and first Story Mode driving/damage script.
 
-Still needed: convert a BeamNG vehicle model and its data into a GTA-compatible format, tune and validate the physics in-game, test deformation behavior, and create a compatible installation package. The prototype script has not yet been installed or exercised in GTA V.
+Still needed: install and launch the script in GTA V, tune and validate physics and deformation in-game, convert a BeamNG vehicle model and its data into a GTA-compatible format, and create a compatible installation package. The prototype has not yet been installed or exercised in GTA V.
 
 ## Asset handling
 
