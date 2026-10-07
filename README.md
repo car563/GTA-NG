@@ -12,10 +12,10 @@ This is a gameplay prototype, not a BeamNG vehicle conversion: the six vehicles 
 
 - GTA V Legacy on PC.
 - Script Hook V compatible with the installed GTA V version. The game currently installed for development is build 1.0.3889.0.
-- ScriptHookVDotNet v3. The stable v3.6.0 release is incompatible with GTA builds 1.0.3258.0 and later; use nightly.89 or later. The current official nightly is [v3.7.0-nightly.191](https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/tag/v3.7.0-nightly.191).
-- Copy `scripts/GTA-NG.3.cs` into the GTA V game folder's `scripts` directory. Create the directory if needed. ScriptHookVDotNet loads versioned `.3.cs` source scripts from that directory.
+- ScriptHookVDotNet v3. Stable v3.6.0 is incompatible with GTA builds 1.0.3258.0 and later; use nightly.89 or later. The current official nightly is [v3.7.0-nightly.191](https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/tag/v3.7.0-nightly.191).
+- After installing those runtime dependencies into the GTA V game folder, run `install.ps1` from this repository in an elevated PowerShell window. It checks for the required files and copies `scripts/GTA-NG.3.cs` into GTA's `scripts` directory.
 
-Do not launch GTA Online with these files installed; this project is for Story Mode only. Script Hook V and ScriptHookVDotNet must be installed manually and are not bundled here. This is not a one-click Melty installation.
+The installer only places the GTA-NG script; it does not download or install Script Hook V or ScriptHookVDotNet. Do not launch GTA Online with these files installed; this project is for Story Mode only. This is not a one-click Melty installation.
 
 ## BeamNG inventory tool
 
@@ -39,9 +39,9 @@ python -m unittest discover -s tests -v
 
 ## Current status
 
-Implemented: BeamNG local car inventory and first Story Mode driving/damage script.
+Implemented: BeamNG local car inventory, first Story Mode driving/damage script, and a local script installer.
 
-Still needed: install and launch the script in GTA V, tune and validate physics and deformation in-game, convert a BeamNG vehicle model and its data into a GTA-compatible format, and create a compatible installation package. The prototype has not yet been installed or exercised in GTA V.
+Still needed: install the compatible runtime and launch the script in GTA V, tune and validate physics and deformation in-game, convert a BeamNG vehicle model and its data into a GTA-compatible format, and create a compatible installation package. The prototype has not yet been installed or exercised in GTA V.
 
 ## Asset handling
 
