@@ -14,16 +14,16 @@ This is a gameplay prototype, not a BeamNG vehicle conversion: the six vehicles 
 - Script Hook V compatible with the installed GTA V version. The game currently installed for development is build 1.0.3889.0.
 - ScriptHookVDotNet v3. Stable v3.6.0 is incompatible with GTA builds 1.0.3258.0 and later; use nightly.89 or later. The current official nightly is [v3.7.0-nightly.191](https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/tag/v3.7.0-nightly.191).
 
-First install the compatible runtime files into the GTA V game folder. Then download or clone the full `gta-storymode-prototype` branch so `install.ps1` remains beside the `scripts` folder. Open PowerShell as Administrator in that repository folder and run:
+Download or clone the full `gta-storymode-prototype` branch so `install.ps1` remains beside the `scripts` folder. In PowerShell, run:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\install.ps1
 ```
 
-The installer checks that the GTA and Script Hook files exist, copies `scripts/GTA-NG.3.cs` into GTA's `scripts` directory, and waits for Enter before closing so errors remain visible. If it reports missing files, install the compatible runtime first. If it reports that the mod source is missing, download the full branch instead of opening only the `install.ps1` file.
+The installer checks for GTA V build 1.0.3889.0 and an existing `dinput8.dll` ASI loader, then downloads Script Hook V from its official site and ScriptHookVDotNet v3.7.0-nightly.191 from its official GitHub release. It verifies the ScriptHookVDotNet archive SHA-256, copies only the required runtime files and GTA-NG script, and leaves the existing ASI loader untouched. It may request Windows Administrator permission to write in the GTA folder. This installer has not been run against a GTA installation in this workspace.
 
-The installer does not download or install Script Hook V or ScriptHookVDotNet. Do not launch GTA Online with these files installed; this project is for Story Mode only. This is not a one-click Melty installation.
+The installer downloads third-party runtimes at install time. That is a standalone setup helper, not a Melty one-click release: the package still depends on Script Hook V and ScriptHookVDotNet, and the Melty release remains blocked until a compatible Melty-provisioned runtime is available. Do not launch GTA Online with these files installed; this project is for Story Mode only.
 
 ## BeamNG inventory tool
 
